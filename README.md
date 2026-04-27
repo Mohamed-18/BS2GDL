@@ -98,3 +98,8 @@ Key Features:
 Usage:
     Run the script with specified arguments to start the training process.
 
+
+## Datasets
+
+ACDC - LVQuan19 :  https://doi.org/10.5281/zenodo.19387635
+
