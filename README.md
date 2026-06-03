@@ -1,8 +1,8 @@
-BS2GDL: B-Spline Geometrically-Guided CNN Models for LV Segmentation
+BSGCNN: B-Spline Geometrically-Guided CNN Models for LV Segmentation
 
 Overview :
 
-BS2GDL is a deep learning framework for segmenting the left ventricle (LV) myocardium in medical imaging. The architecture is designed in two stages:
+BSGCNN is a deep learning framework for segmenting the left ventricle (LV) myocardium in medical imaging. The architecture is designed in two stages:
 
 CNN_Step_1: Initial nodal point regression.
 CNN_Step_2: Segmentation refinement using geometric constraints.
@@ -13,7 +13,7 @@ CNN_Step_1: Initial Nodal Point Regression
 
 Description :
 
-The first stage of BS2GDL, CNN_Step_1, regresses key nodal points representing the LV contour. These nodal points are parameters for a parametric B-spline model, enabling a structured representation of the LV boundaries. Features
+The first stage of BSGCNN, CNN_Step_1, regresses key nodal points representing the LV contour. These nodal points are parameters for a parametric B-spline model, enabling a structured representation of the LV boundaries. Features
 
 Encoder-Decoder Architecture: Captures hierarchical spatial features and predicts nodal points.
 Loss Function: Uses Root Mean Squared Error (RMSE) to optimize the regression of nodal points.
@@ -70,7 +70,7 @@ Usage:
     Integrated within the CNN to ensure geometric consistency of the LV boundaries.
     Produces smooth and closed contours for accurate representation.
 
-BS2GDL_Model_Step_1.py
+BSGCNN_Model_Step_1.py
 
 Purpose: Defines the Step 1 model architecture for nodal point regression.
 
