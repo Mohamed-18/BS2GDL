@@ -99,7 +99,30 @@ Usage:
     Run the script with specified arguments to start the training process.
 
 
-## Datasets
 
-ACDC - LVQuan19 :  https://doi.org/10.5281/zenodo.19387635
+bspline_contour_approximation.py
+
+Purpose: Generates B-spline approximations of anatomical contours from binary segmentation masks and extracts a fixed number of nodal points for geometric modeling.
+
+Key Features:
+
+* **Contour Extraction:** Automatically extracts the largest contour from binary masks using OpenCV.
+* **Regularized B-spline Approximation:** Fits a closed B-spline contour using a least-squares formulation with curvature regularization.
+* **Automatic Regularization Selection:** Determines the optimal regularization parameter ((\lambda)) using Leave-One-Out Cross-Validation (LOOCV).
+* **Nodal Point Generation:** Samples a predefined number of nodal points uniformly along the fitted B-spline contour.
+* **Visualization and Export:** Saves contour fitting visualizations and exports nodal point coordinates in JSON format.
+
+Usage:
+
+* Generates the ground-truth nodal points required for training **CNN_Step_1**.
+* Converts manual segmentation masks into a compact geometric representation based on B-spline parameters.
+* Provides an automated preprocessing pipeline for constructing the nodal point annotations used throughout the BSGCNN framework.
+
+Outputs:
+
+* JSON file containing the extracted nodal points for each image.
+* Visualization images showing the fitted B-spline contours.
+* Statistics on the optimal regularization parameter and approximation error over the dataset.
+
+
 
